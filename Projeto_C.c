@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void V_MaiorouMenor();
+void S_DoisNumeros();
+void V_Primo();
+
+
 int main()
 { 
     int i,x,op,soma,p,v;
@@ -21,61 +26,28 @@ int main()
     switch(op){
         
     case 1:
-    printf("Digite o primeiro valor a ser analisado: ");
-    scanf("%d",&i);
-    
-    printf("Digite o segundo valor a ser analisado: ");
-    scanf("%d",&x);
-    
-    
-    if(i>x)
-    {
-        printf("O maior valor é %d\n",i);
-        printf("O menor valor é o %d\n",x);
-    }
-    
-    else
-    {
-        
-    printf("O menor valor é %d\n",i);
-    printf("O maior valor é o %d",x);
-    }
-    
+    V_MaiorouMenor();
     break;
     
     
-    
     case 2:
-    printf("Digite o primeiro valor a ser somado: ");
-    scanf("%d",&i);
-    
-    printf("Digite o segundo valor a ser somado: ");
-    scanf("%d",&x);    
-    
-    soma=i+x;
-    
-    printf("A Resultado é %d\n",soma);
-    
+    S_DoisNumeros();
     break;
     
     
     case 3:
- 
-        printf("Favor digitar o número a ser analisado: ");
-    scanf("%d", &v);
-    for (p =1; p<=v; p++){
-        if (v % p==0){
-            c++;
-        }
-    }
-        if(c==2){printf("O número %d, é primo\n", v);}
-        
-        else{printf("O número %d, não é primo\n", v);}
-        
+    V_Primo();
+    break;
     
-
-        break;
-    case 4:return 0;
+    case 4:
+    return 0;
+    break;
+    
+    default:
+    printf("Favor digitar Valor Valido!!");
+    return 0;
+    break;
+    
     }
 
      while(op<4){
@@ -93,10 +65,37 @@ int main()
     
     scanf("%d",&op);
     
-    
-    switch(op){
+        
+   switch(op){
         
     case 1:
+    V_MaiorouMenor();
+    break;
+    
+    
+    case 2:
+    S_DoisNumeros();
+    break;
+    
+    
+    case 3:
+    V_Primo();
+    break;
+    
+    case 4:
+    return 0;
+    
+    default:
+    printf("Favor digitar Valor Valido!!");
+    
+    break;
+}   
+}
+}
+
+void V_MaiorouMenor(){
+    int i,x;
+    
     printf("Digite o primeiro valor a ser analisado: ");
     scanf("%d",&i);
     
@@ -114,14 +113,17 @@ int main()
     {
         
     printf("O menor valor é %d\n",i);
-    printf("O maior valor é o %d",x);
+    printf("O maior valor é o %d\n",x);
     }
     
-    break;
     
+}
+
+
+
+void S_DoisNumeros(){
+    int i,x,soma;
     
-    
-    case 2:
     printf("Digite o primeiro valor a ser somado: ");
     scanf("%d",&i);
     
@@ -130,30 +132,23 @@ int main()
     
     soma=i+x;
     
-    printf("*A Resultado é %d\n*",soma);
+    printf("O Resultado é %d\n",soma);
     
-    break;
-    
-    
-    case 3:
-       printf("Favor digitar o número a ser analisado: ");
+}
+
+
+void V_Primo(){
+    int p,v,c;
+          printf("Favor digitar o número a ser analisado: ");
     scanf("%d", &v);
     for (p =1; p<=v; p++){
         if (v % p==0){
             c++;
         }
     }
-    
-        if(c==2){printf("*O número %d, é primo\n*", v);}
+        if(c<=2){printf("O número %d, é primo\n", v);}
         
-        else{printf("*O número %d, não é primo\n*", v);}
+        else{printf("O número %d, não é primo\n", v);}
         
-        break;
-    case 4:return 0;
-    break;
     
-}   
 }
-}
-
-
