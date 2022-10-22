@@ -44,7 +44,7 @@ int main()
     break;
     
     default:
-    printf("Favor digitar Valor Valido!!");
+    printf("*******Favor digitar Valor Valido!!*******");
     return 0;
     break;
     
@@ -105,15 +105,15 @@ void V_MaiorouMenor(){
     
     if(i>x)
     {
-        printf("O maior valor é %d\n",i);
-        printf("O menor valor é o %d\n",x);
+        printf("*******O maior valor é %d*******\n",i);
+        printf("*******O menor valor é o %d*******\n",x);
     }
     
     else
     {
         
-    printf("O menor valor é %d\n",i);
-    printf("O maior valor é o %d\n",x);
+    printf("*******O menor valor é %d*******\n",i);
+    printf("*******O maior valor é o %d*******\n",x);
     }
     
     
@@ -132,13 +132,14 @@ void S_DoisNumeros(){
     
     soma=i+x;
     
-    printf("O Resultado é %d\n",soma);
+    printf("*******O Resultado é %d*******\n",soma);
     
 }
 
 
 void V_Primo(){
-    int p,v,c;
+    int p,v;
+    int c = 0;
           printf("Favor digitar o número a ser analisado: ");
     scanf("%d", &v);
     for (p =1; p<=v; p++){
@@ -146,9 +147,11 @@ void V_Primo(){
             c++;
         }
     }
-        if(c<=2){printf("O número %d, é primo\n", v);}
+       
+        if(c==2){printf("*******O número %d, é primo*******\n", v);}
         
-        else{printf("O número %d, não é primo\n", v);}
+        else{printf("*******O número %d, não é primo*******\n", v);}
         
     
 }
+
